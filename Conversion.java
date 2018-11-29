@@ -6,6 +6,7 @@ public class Conversion{
 
 		int num = 8950;
 		System.out.println(num + " --> " + convertToArrayList(num));
+		System.out.println(convertToArrayList(num) + " --> " + ReConvert(convertToArrayList(num)));
  	}
 
  	public static ArrayList<Integer> convertToArrayList(int num){
@@ -21,7 +22,13 @@ public class Conversion{
 		return reverse;
 
  	}
- 	public int ReConvert(ArrayList <Integer> list){
-		return 1;
+ 	public static int ReConvert(ArrayList <Integer> list){
+		int build = 0;
+		int track = 1;
+		for(int i = list.size(); i > 0; i--){
+			build += (list.get(i-1)*track);
+			track *= 10;
+		}
+		return build;
 	}
  }
