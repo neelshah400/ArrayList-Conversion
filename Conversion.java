@@ -14,7 +14,10 @@ public class Conversion{
 	public static int reConvert(ArrayList <Integer> list){
 		return 1;
 
+
 		//
+
+
 
 	}
 }
