@@ -2,32 +2,24 @@ import java.util.ArrayList;
 
 public class Conversion{
 
-	public static void main(String[]args){
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-		//
-		ArrayList <Integer> arr = new ArrayList <>();
-		for(int i = 0; i < 10; i++)
-		arr.add(i);
-		reConvert(arr);
-
-	}
-	public static int reConvert(ArrayList <Integer> list){
-		return 1;
-
-
-		//
-
-
-=======
-=======
->>>>>>> parent of 0be2bc8... Finish convertToArrayList()
+ 	public static void main(String[]args){
 	
-		//
-	
-	}
->>>>>>> parent of 0be2bc8... Finish convertToArrayList()
-
-	}
-}
+		int num = 8950;
+		System.out.println(num + " --> " + convertToArrayList(num));
+ 	}
+ 	
+ 	public static ArrayList<Integer> convertToArrayList(int num){
+ 	
+ 		ArrayList<Integer> list = new ArrayList<>();
+		while(num >= 1){
+			list.add(num % 10);
+			num /= 10;
+		}
+		ArrayList<Integer> reverse = new ArrayList<>();
+		for(int i = list.size() - 1; i >= 0; i--)
+			reverse.add(list.get(i));
+		return reverse;
+		
+ 	}
+ 	
+ }
